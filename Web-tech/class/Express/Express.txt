@@ -1,0 +1,46 @@
+express is a minmal and flexible web application.
+framework for nodejs that simplifier the development of web server and API'server
+it provides features such as routing, middleware support request and response handling templete rendering, rest API creation
+
+why we use express instead of nodejs(means why we use express?)
+
+node package manager(npm)-->install all packages which is requires.
+how to create project in express?
+-->1)node -v
+    2)npm init -y
+    3)npm install express
+    4)create file in express index.js
+
+
+**all port no's are strored in .env file. 
+=====>get-fetch, post-create, put-update, delete-delete patch----http request
+Q.diff put and patch
+
+activity:
+1.diff bet package.json and packagelock.json
+2.diff bet dev dependence and dependencies
+3.in / create additional features (bottuon , like that).
+4.study get post put delete patch.
+
+
+Middleware in express -->middleware is a function that executes during request before sending final response.
+They have access through request, response and next.
+
+client-->middleware---->server.
+
+activity:
+why we use middleware?
+what is a types of middleware?
+what is a benefits of middleware?
+where we use middleware im company level?
+detaile study of query parameters with 2-3 examples?
+where we use query parameters im company level?
+
+
+Handling request and response--> express application handle http request and response.
+
+request-->the req object contain info about the client request.
+ex., -->url, headers, query parameters, req body, etc.
+
+
+

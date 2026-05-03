@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Events Demo</title>
+
+    <style>
+        body {
+            background-color: #414141;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 15px;
+        }
+
+        img {
+            width: 200px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        a {
+            color: lightblue;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Amazing Images (Click to Remove)</h2>
+
+<ul id="images">
+    <li>
+        <img id="photoshop"
+            src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg"
+            alt="Photoshop Logo">
+    </li>
+
+    <li>
+        <img id="japan"
+            src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
+            alt="Mount Fuji">
+    </li>
+
+    <li>
+        <img id="Nature"
+            src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b"
+            alt="Nature Image">
+    </li>
+
+    <li>
+        <img id="photoman"
+            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+            alt="Photographer">
+    </li>
+
+    <li>
+        <img id="tiger"
+            src="https://images.unsplash.com/photo-1546182990-dffeafbe841d"
+            alt="Tiger"
+            onclick="alert('Hii I am Tiger')">
+    </li>
+
+    <li>
+        <a href="https://google.com" id="google">Visit Google</a>
+    </li>
+</ul>
+
+</body>
+
+<script>
+    // Tiger Click Event
+    document.getElementById('tiger').onclick = function () {
+        alert('Click on Tiger');
+    };
+
+    // Nature Click Event with Event Object
+    document.getElementById('Nature').addEventListener('click', function (e) {
+        alert('Nature Image Clicked');
+        console.log('Nature Image Clicked'); // shows event details in console
+    }, false);
+
+    // event propagation
+    document.getElementById('images').addEventListener('click', function (e) {
+        console.log('Clicking inside the UL'); 
+    }, false);
+
+    document.getElementById('google').addEventListener('click', function (e){
+         console.log('google clicked');
+         e.preventDefault();
+    }, false);
+</script>
+
+</html>
+
+
+  <!--what is event:event is an action that happens in browser 
+  ex., clicking a button , moving mouse, pressing key, submitting form, loading page, etc
+
+  js can detect this events and respond to them.
+
+  Types of events:
+  1.mouse event:click, dbclick, mouseover, mouseout
+  2.keyboard event:keydown, keyup.
+  3.browser event:load, resize, scroll.
+  
+   <li>
+            <img id="tiger"
+                src="https://images.unsplash.com/photo-1546182990-dffeafbe841d"
+                alt="Tiger"
+                onclick="alert('Hii I am Tiger')">
+                
+   </li>:html should contain structure, js should contain logic so mixing both is bad practice hard to maintain in big project
+  
+
+<script>
+    document.getElementById(tiger).onclick=function(){
+        alert('click')
+    }
+</script>  : select element assign fun to click event when click fun run, only 1 event can be assign 
+   cnnot handle multiple listeners properly.
+
+   j query, type, timestamp, default prevented, target, source element, current target, client X, client Y, screen X, screen Y, 
+   alt key, control key, shift key, 
+
+   addeventListner--is JS method used to attach and event handler to an html elemnet so that specific fun run when a 
+   particular event is occur
+
+
+eventPropagation is true then:event goes inner element to parent and parent to document 
+eventCapturing: from parenmt to child
+
+
+on clicking image :image is removed and if refreshed it should be restored.

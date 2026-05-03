@@ -1,0 +1,19 @@
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from './assets/vite.svg'
+import heroImg from './assets/hero.png'
+import './App.css'
+import Student_Info from './student_Info'
+import Counter from './counter'
+
+function App() {
+  const [count, setCount] = useState(0)
+
+  return (
+    <>
+      <Student_Info fname="Tejshree" age="20" course="AIML"/>
+    </>
+  );
+}
+
+export default App

@@ -1,0 +1,36 @@
+SQL(Structural Query Language):
+==>is used to communicate between realational database 
+    Ex.,mysql, postgreSQL, oracle.
+
+add, update. delete
+banking, health-sector, education
+
+Activity
+1.create table, insert data, update, delete.
+
+create table student{
+    primary key id,
+    varchar name(50)
+};
+
+insert into student(101, "Tejshree");
+
+update table student name="Tej" where id=101;
+
+delete table student;
+
+
+**Webstoket:
+what is ORM(object Relational Mapping):instead of writing sql query we use js object
+student.fineAll
+
+webstoket allows us realtime communication HTTP-->request and response
+webstoket--->continous connection
+real-time ex., chatApp like whatsApp, live stock price update, online gaming, notification
+
+command to create webstoket---->npm install ws
+
+
+
+Activities:
+-deep study webstoket understand with example.

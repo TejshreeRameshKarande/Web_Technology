@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Advanced Result Checker</title>
+
+<style>
+body{
+  font-family: Arial;
+  background: linear-gradient(135deg,#ff9a9e,#fad0c4);
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.box{
+  background:white;
+  padding:30px;
+  border-radius:15px;
+  text-align:center;
+  width:320px;
+}
+input{
+  width:90%;
+  padding:8px;
+  margin:5px 0;
+}
+button{
+  padding:10px;
+  border:none;
+  background:#ff6f61;
+  color:white;
+  border-radius:8px;
+  cursor:pointer;
+}
+#output{
+  font-weight:bold;
+  margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+<h2>Student Result 🎓</h2>
+
+<form id="resultForm">
+
+<input type="text" id="name" placeholder="Student Name"><br>
+<input type="number" id="m1" placeholder="Maths Marks"><br>
+<input type="number" id="m2" placeholder="Science Marks"><br>
+<input type="number" id="m3" placeholder="English Marks"><br>
+
+<button type="submit">Check Result</button>
+
+</form>
+
+<p id="output"></p>
+
+</div>
+
+<script src="result.js"></script>
+</body>
+</html>

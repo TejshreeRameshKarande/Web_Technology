@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Recipe Details</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- 🌍 jQuery + Select2 -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0/dist/js/select2.min.js"></script>
+</head>
+<body>
+
+<!-- 🔝 Navbar with Language Selector -->
+<div class="navbar">
+  🍴 Recipe Details
+
+  <!-- 🌍 Top Right Language Selector -->
+  <div class="lang-top">
+    <select id="language" multiple>
+      <option>English</option>
+      <option>Hindi</option>
+      <option>Marathi</option>
+      <option>Spanish</option>
+      <option>French</option>
+      <option>German</option>
+      <option>Chinese</option>
+      <option>Japanese</option>
+      <option>Arabic</option>
+    </select>
+  </div>
+</div>
+
+<!-- ⬅ Back Button -->
+<button onclick="goBack()" class="back-btn">⬅ Back</button>
+
+<!-- 🍽️ Recipe Title -->
+<h1 id="title" style="text-align:center;"></h1>
+
+<!-- 🌍 Generate Button -->
+<div style="text-align:center; margin-top: 20px;">
+  <button onclick="loadRecipe()">🌍 Generate Recipe</button>
+</div>
+
+<!-- 📋 Recipe Content -->
+<div class="recipe-container">
+  <div class="section">
+    <h3>📋 Ingredients & Steps</h3>
+    <pre id="content">Loading...</pre>
+  </div>
+</div>
+
+<!-- 🎥 YouTube Button -->
+<div class="buttons">
+  <button onclick="openYouTube()">🎥 Watch on YouTube</button>
+</div>
+
+<script src="js/script.js"></script>
+
+<!-- 🌍 Initialize Select2 -->
+<script id="finaljs2">
+  $(document).ready(function() {
+    $('#language').select2({
+      placeholder: "🌍 Select language",
+      tags: true
+    });
+  });
+</script>
+
+</body>
+</html>

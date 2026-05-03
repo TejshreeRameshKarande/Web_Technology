@@ -1,0 +1,36 @@
+<!--Form Validation
+checking user inputs before sending data to server.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >Form Validation using DOM</title>
+</head>
+<body style="text-align: center;  background-color:rgb(227, 216, 157);">
+    <h1>FORM VALIDATION</h1>
+    <form onsubmit="return SubmitButtonClick(event)">
+        name : 
+        <input type="text" id="name">
+        <span id = "nameError"></span>
+        <br><br>
+
+        emailId : 
+        <input type="text" id="emailId">
+        <span id = "emailIdError"></span>
+        <br><br>
+
+        password : 
+        <input type="text" id="password">
+        <span id = "passwordError"></span>
+        <br><br>
+        
+        <input type="submit" value="Submit" style="background: #bdd996;">
+
+        <span id = "successMessage" value="success"></span>
+
+    </form>
+    <script src="Experiment4.js"></script>
+</body>
+</html>

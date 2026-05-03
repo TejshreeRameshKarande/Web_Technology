@@ -1,0 +1,81 @@
+***React**
+
+React : react is js library developed by meta to build a fast and interactive user interfaces
+---It is single page application(SPA)-page does not reload only contain change
+    ex, instagram, facebook
+
+why do we use react?
+problem with tradition js : fully page reload, complex DOM manipulation, hard to manage large application.
+by using react : Updates only required part, use reusable components.
+
+
+**Virtual DOM**
+--react creates a copy of real DOM means virtual DOM.
+--when data changes reat updated virtual DOM.
+--Updated only change the part in real DOM.
+--It is used for high performance.
+
+How we can create project in react?
+-npx create react -app/npm create vite@latest student_app
+
+
+vite : fast build tool 
+npn install : install dependencies
+npm run dev : start server
+
+index.html--
+jsx--> 'js+xml' it allows to write html code inside the js 
+main.jsx--?entry point of react application.
+jsx syntax : 
+const element = <h1>Hello React</h1>
+
+rules of jsx :
+--must return single parents
+--use {}(scope barckets) for js
+
+**components is a heart of react**
+--functional component: 
+    ex.,function student{
+        return <h1>This is functional component</h1>
+        }
+
+Use components :
+ex.1
+functionApp(){
+    return <> 
+        <student/>
+    </>
+}
+
+ex.2
+functionApp(){
+    return <student Fname = 'TRK'/>
+}
+function student(props){
+    return <h2>Name : { props.fname } </h2>
+}
+
+**props:
+--data pass from parent to child
+
+
+Activity:
+--diff bet angular and react
+--market hype?
+--why react js library is created?
+--what is components types 
+--where we use componentsin react?with 2 examples
+--what is props why we use props and types of props with 2 examples.
+
+components-->2 types
+1.class component
+2.functional component
+
+**State**
+data that can change value that changes overtime when state chnages screen/UI update automatically
+
+
+why we use state?which state updated automatically?
+without state value will not update on screen, with state value will update..
+
+what is diff bet props and state?
